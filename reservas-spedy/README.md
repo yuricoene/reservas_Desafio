@@ -1,11 +1,10 @@
-# modelo-README.md
-Modelo (template) de README para utilizar nas documentações dos seus projetos no GitHub. Deixe sua ⭐ se curtiu o template, para ficar salvo e utilizar depois.
-
 # Título/Nome do projeto
 
-Descreva brevemente o seu projeto. Aqui você pode utilizar texto e também imagens/diagramas.
+Aplicação de reservas de salas de coworking: back-end em C#/.NET, front-end em React, banco SQLite.
+Lista reservas por dia em ordem cronológica, permite criar (sala, título, início, fim) e cancelar reservas. O back-end valida campos obrigatórios, fim > início e ausência de sobreposição de horários na mesma sala.
+Cancelamento é soft delete (marca como cancelada, não remove do banco) para preservar histórico e evitar problemas de integridade futuros.
 
-](https://mermaid.ai/app/projects/5941777c-bcc4-4ad6-8b5f-85b58117d067/diagrams/9df5e5f4-8068-4edc-8f7b-8784b14bff71/share/invite/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudElEIjoiOWRmNWU1ZjQtODA2OC00ZWRjLThmN2ItODc4NGIxNGJmZjcxIiwiYWNjZXNzIjoiRWRpdCIsImlhdCI6MTc4NzE2NjUzOH0.mHen79JQkHGsJdol8nUBXHjpakTPKUEdJPMQjprpm_c?entryPoint=share-modal)
+[Diagrama](https://mermaid.ai/app/projects/5941777c-bcc4-4ad6-8b5f-85b58117d067/diagrams/9df5e5f4-8068-4edc-8f7b-8784b14bff71/share/invite/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudElEIjoiOWRmNWU1ZjQtODA2OC00ZWRjLThmN2ItODc4NGIxNGJmZjcxIiwiYWNjZXNzIjoiRWRpdCIsImlhdCI6MTc4NzE2NjUzOH0.mHen79JQkHGsJdol8nUBXHjpakTPKUEdJPMQjprpm_c?entryPoint=share-modal)
 
 - No site, vá no campo: Actions > Copy Markdown. Copie o link e cole no seu arquivo README.md e o diagrama estará lá.
 
