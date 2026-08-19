@@ -5,7 +5,7 @@ Modelo (template) de README para utilizar nas documentações dos seus projetos 
 
 Descreva brevemente o seu projeto. Aqui você pode utilizar texto e também imagens/diagramas.
 
-https://mermaid.ai/app/projects/5941777c-bcc4-4ad6-8b5f-85b58117d067/diagrams/9df5e5f4-8068-4edc-8f7b-8784b14bff71/version/v0.1/edit
+](https://mermaid.ai/app/projects/5941777c-bcc4-4ad6-8b5f-85b58117d067/diagrams/9df5e5f4-8068-4edc-8f7b-8784b14bff71/share/invite/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudElEIjoiOWRmNWU1ZjQtODA2OC00ZWRjLThmN2ItODc4NGIxNGJmZjcxIiwiYWNjZXNzIjoiRWRpdCIsImlhdCI6MTc4NzE2NjUzOH0.mHen79JQkHGsJdol8nUBXHjpakTPKUEdJPMQjprpm_c?entryPoint=share-modal)
 
 - No site, vá no campo: Actions > Copy Markdown. Copie o link e cole no seu arquivo README.md e o diagrama estará lá.
 
