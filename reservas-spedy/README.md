@@ -26,6 +26,7 @@ Descreva brevemente o seu projeto. Aqui você pode utilizar texto e também imag
 * [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 
 **Arquitetura e Padrões de Projeto**
+
 *Clean Architecture*
 *Feature-Sliced Design*
 *Injeção de Dependência*
@@ -37,37 +38,67 @@ Descreva brevemente o seu projeto. Aqui você pode utilizar texto e também imag
 * [Git](https://git-scm.com/)
 * [GitHub](https://github.com/)
 
-## Dependências e Versões Necessárias
-
-Liste as dependências necessárias para rodar o projeto e as versões que você utilizou.
-
-* Docker - Versão: X.X
-
+### Dependências e Versões Necessárias
+* **.NET SDK** - Versão: 8.0
+* **Node.js** - Versão: 18.x ou superior (LTS)
+* **npm** - Versão: 9.x ou superior
+* **SQLite** - Versão: 3.x (gerenciado via Entity Framework Core)
+  
 ## Como rodar o projeto ✅
 
-Descreva o passo a passo necessário para rodar sua aplicação. Lembre-se: a pessoa nunca rodou seu projeto. Não tenha medo de detalhar o máximo possível. Isso é necessário!
+Siga o passo a passo para executar a aplicação completa em seu ambiente local.
 
-Uma boa forma de descrever o passo a passo é:
-
+### 1. Clonar o repositório
+Abra o terminal na pasta onde deseja salvar o projeto e execute:
 ```
-Comando 1
+git clone [https://github.com/SEU_USUARIO/reservas-spedy.git](https://github.com/SEU_USUARIO/reservas-spedy.git)
 ```
 
 Depois, rode o seguinte comando:
-
 ```
-Comando 2
+cd reservas-spedy
 ```
 
-Deixe claro como a pessoa pode confirmar que a aplicação está rodando da forma correta. Pode ser com prints ou a mensagem que ela deve esperar.
-
-## Como rodar os testes
-
-Explique como rodar os testes da aplicação. Exemplo de um comando usando Makefile para rodar os testes:
-
+## Como rodar o Back-end(.Net)
+Passo 1: No terminal já dentro da pasta reservas-spedy, percorra até a pasta back-end e insira esse comando: 
 ```
-make test
+cd backend
 ```
+
+Passo 2: Restaure as dependências do projeto: 
+```
+dotnet restore
+```
+
+Passo 3: Inicie o servidor da API: 
+```
+dotnet run
+```
+
+Para confirmar o Entity Framework criará o banco de dados SQlite automaticamente. O terminal exibirá as seguintes mensagens confirmando a execução: 
+#foto do meu terminal
+
+## Como rodar o Front-end
+1 Passo: Abra um segundo terminal, sem fechar o do back-end e encontre a pasta do front-end a partir da raiz
+```
+cd frontend
+```
+
+2 Passo: instale as dependências do node
+```
+npm install
+```
+
+3 Passo: Inicie o servidor local de desenvolvimento
+```
+npm run dev
+```
+
+4 Passo confirmar se o front-end está rodando
+# print da minha tela
+
+## Teste de Integração
+
 
 ## 📌 (Título) - Informações importantes sobre a aplicação (exemplo) 📌
 
@@ -78,18 +109,12 @@ Um bom exemplo: se você estiver construindo uma API, liste as rotas da aplicaç
 
 ## ⚠️ Problemas enfrentados
 
-Liste os problemas que você enfrentou construindo a aplicação e como você resolveu cada um deles. Você que desenvolveu o projeto é a pessoa que mais conhece/entende os possíveis problemas que uma pessoa pode enfrentar rodando a aplicação. Compartilhe esse conhecimento e facilite a vida da pessoa descrevendo-os.
+Problema 1: Pastas duplicadas no clone/descompactação
+Em alguns ambientes, a estrutura de arquivos era extraída como reservas-spedy/reservas-spedy/backend, impedindo a navegação direta via cd backend.
 
-Exemplo:
+Como solucionar: Padronizou-se o guia de execução instruindo a navegar a partir da raiz ou ajustar o repositório para manter a estrutura única na pasta raiz.
 
-### Problema 1:
-Descrição do problema
-* Como solucionar: explicar a solução.
-
-### Problema 2:
-Descrição do problema
-* Como solucionar: explicar a solução.
 
 ## ⏭️ Próximos passos
-
-Descreva se você pretende, pensou ou gostaria de elaborar uma nova feature para o seu projeto definindo os próximos passos.
+*Orquestração com Docker: Configurar um docker-compose.yml para subir a API, o front-end e a base de dados em ecossistemas isolados utilizando apenas o docker compose up.
+*Disparo Automático de E-mails: Integrar um serviço de mensageria (SMTP) para enviar confirmações e avisos de cancelamento diretamente para o e-mail do usuário.
