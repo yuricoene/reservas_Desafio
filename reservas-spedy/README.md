@@ -6,9 +6,6 @@ Cancelamento é soft delete (marca como cancelada, não remove do banco) para pr
 
 [Diagrama](https://mermaid.ai/app/projects/5941777c-bcc4-4ad6-8b5f-85b58117d067/diagrams/9df5e5f4-8068-4edc-8f7b-8784b14bff71/share/invite/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudElEIjoiOWRmNWU1ZjQtODA2OC00ZWRjLThmN2ItODc4NGIxNGJmZjcxIiwiYWNjZXNzIjoiRWRpdCIsImlhdCI6MTc4NzE2NjUzOH0.mHen79JQkHGsJdol8nUBXHjpakTPKUEdJPMQjprpm_c?entryPoint=share-modal)
 
-- No site, vá no campo: Actions > Copy Markdown. Copie o link e cole no seu arquivo README.md e o diagrama estará lá.
-
-
 ### Tecnologias Utilizadas
 
 **Back-end**
@@ -103,5 +100,5 @@ Em alguns ambientes, a estrutura de arquivos era extraída como reservas-spedy/r
 Como solucionar: Padronizou-se o guia de execução instruindo a navegar a partir da raiz ou ajustar o repositório para manter a estrutura única na pasta raiz.
 
 ## ⏭️ Próximos passos
-**Orquestração com Docker: Configurar um docker-compose.yml para subir a API, o front-end e a base de dados em ecossistemas isolados utilizando apenas o docker compose up.**
-**Disparo Automático de E-mails: Integrar um serviço de mensageria (SMTP) para enviar confirmações e avisos de cancelamento diretamente para o e-mail do usuário.**
+* **Orquestração com Docker: Configurar um docker-compose.yml para subir a API, o front-end e a base de dados em ecossistemas isolados utilizando apenas o docker compose up.**
+* **Disparo Automático de E-mails: Integrar um serviço de mensageria (SMTP) para enviar confirmações e avisos de cancelamento diretamente para o e-mail do usuário.**
