@@ -4,7 +4,7 @@ Aplicação de reservas de salas de coworking: back-end em C#/.NET, front-end em
 Lista reservas por dia em ordem cronológica, permite criar (sala, título, início, fim) e cancelar reservas. O back-end valida campos obrigatórios, fim > início e ausência de sobreposição de horários na mesma sala.
 Cancelamento é soft delete (marca como cancelada, não remove do banco) para preservar histórico e evitar problemas de integridade futuros.
 
-[Diagrama](https://mermaid.ai/app/projects/5941777c-bcc4-4ad6-8b5f-85b58117d067/diagrams/9df5e5f4-8068-4edc-8f7b-8784b14bff71/share/invite/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudElEIjoiOWRmNWU1ZjQtODA2OC00ZWRjLThmN2ItODc4NGIxNGJmZjcxIiwiYWNjZXNzIjoiRWRpdCIsImlhdCI6MTc4NzE2NjUzOH0.mHen79JQkHGsJdol8nUBXHjpakTPKUEdJPMQjprpm_c?entryPoint=share-modal)
+![image alt](https://mermaid.ai/app/projects/5941777c-bcc4-4ad6-8b5f-85b58117d067/diagrams/9df5e5f4-8068-4edc-8f7b-8784b14bff71/share/invite/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkb2N1bWVudElEIjoiOWRmNWU1ZjQtODA2OC00ZWRjLThmN2ItODc4NGIxNGJmZjcxIiwiYWNjZXNzIjoiRWRpdCIsImlhdCI6MTc4NzE2NjUzOH0.mHen79JQkHGsJdol8nUBXHjpakTPKUEdJPMQjprpm_c?entryPoint=share-modal)
 
 ### Tecnologias Utilizadas
 
@@ -82,7 +82,7 @@ npm run dev
 4 Passo confirmar se o front-end está rodando
  print da minha tela
 
-## 📌 Rotas da API (`/api/reservas`)
+## Rotas da API (`/api/reservas`)
 
 A API do **Reservas Spedy** disponibiliza os seguintes endpoints para o gerenciamento de agendamentos:
 
@@ -94,10 +94,24 @@ A API do **Reservas Spedy** disponibiliza os seguintes endpoints para o gerencia
 | `PUT` | `/api/reservas/{id}` | Atualiza as informações de uma reserva existente | `200 OK` / `204 No Content` |
 | `DELETE` | `/api/reservas/{id}` | Cancela/remove uma reserva do sistema | `200 OK` / `204 No Content` |
 
-## ⚠️ Problemas enfrentados
-Problema 1: Pastas duplicadas no clone/descompactação
-Em alguns ambientes, a estrutura de arquivos era extraída como reservas-spedy/reservas-spedy/backend, impedindo a navegação direta via cd backend.
-Como solucionar: Padronizou-se o guia de execução instruindo a navegar a partir da raiz ou ajustar o repositório para manter a estrutura única na pasta raiz.
+## Solução de Problemas
+**Sintoma:** 
+Ao rodar `cd backend` ou `cd frontend`, o terminal exibe o erro `ENOENT: no such file or directory` ou não encontra os arquivos de configuração (`package.json` / `.csproj`).
+
+**Causa:** 
+Em alguns ambientes de extração, a estrutura do projeto é criada dentro de uma subpasta com o mesmo nome (ex: `reservas-spedy/reservas-spedy/` ou `frontend/frontend/`).
+
+**Como Solucionar:**
+1. **Ajuste manual da estrutura:**
+   * Mova todo o conteúdo da subpasta duplicada para a pasta pai principal.
+   * Exclua a subpasta vazia restante.
+
+2. **Garantir a estrutura padrão na raiz:**
+   ```text
+   reservas-spedy/
+   ├── backend/          # API .NET
+   ├── frontend/         # App React/Vite
+   └── README.md
 
 ## ⏭️ Próximos passos
 * **Orquestração com Docker: Configurar um docker-compose.yml para subir a API, o front-end e a base de dados em ecossistemas isolados utilizando apenas o docker compose up.**
